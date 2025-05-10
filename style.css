@@ -43,6 +43,7 @@ header span#hamburger {
 
 header ul {
     display: none;
+    background-color: black;
 }
 
 header a {

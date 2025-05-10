@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media-queries.css">
 </head>
-<body>
+<body onresize="menuResize()">
     <header>
         <div id="title">
             <img src="images/title.png" alt="Título Beserk">
@@ -70,6 +70,14 @@
         Criado por <a href="https://github.com/sudojv" target="_blank" rel="external">João Victor</a> em 2025
     </footer>
     <script>
+        function menuResize() {
+            if(window.innerWidth >= 768) {
+                menu.style.display = 'block'
+            } else {
+                menu.style.display = 'none'
+            }
+        }
+
         function menuClick() {
             if(menu.style.display == 'block') {
                 menu.style.display = 'none'
