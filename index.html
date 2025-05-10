@@ -5,16 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Universo Beserk</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-queries.css">
 </head>
 <body>
     <header>
-        <img src="images/title.png" alt="Título Beserk">
+        <div id="title">
+            <img src="images/title.png" alt="Título Beserk">
+        </div>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Mangá</a>
-            <a href="#">Anime</a>
-            <a href="#">Sobre</a>
+            <span id="hamburger" class="material-symbols-outlined" onclick="menuClick()">menu</span>
+            <ul id="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Mangá</a></li>
+                <li><a href="#">Anime</a></li>
+                <li><a href="#">Sobre</a></li>
+            </ul>
         </nav>
     </header>
     <main>
@@ -40,7 +47,9 @@
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/evQd6TVa8H4?si=rq4b0R4tkO6c9yyj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <aside>
-                <h2>A Criação de Berserk</h2>
+                <div id="aside-title">
+                    <h2>A Criação de Berserk</h2>
+                </div>
                 <p>
                     Berserk nasceu da mente de Kentaro Miura, um mangaká japonês que começou a publicar a obra em 1989. Miura criou um universo único, combinando influências de fantasia medieval, horror cósmico e filosofia, tudo isso ilustrado com um estilo artístico meticuloso que se tornou sua marca registrada. Ele escreveu e desenhou a maior parte da série sozinho, dedicando anos a cada capítulo para garantir que cada detalhe fosse perfeito. A obra foi publicada na revista Young Animal, ganhando uma legião de fãs ao longo das décadas, mas também enfrentou longos hiatos devido ao ritmo artesanal de Miura e à sua busca por qualidade.
                 </p>
@@ -58,7 +67,16 @@
         </article>
     </main>
     <footer>
-        Criado por <a href="https://x.com/sudojvdev">@sudojvdev</a> em 2025
+        Criado por <a href="https://github.com/sudojv" target="_blank" rel="external">João Victor</a> em 2025
     </footer>
+    <script>
+        function menuClick() {
+            if(menu.style.display == 'block') {
+                menu.style.display = 'none'
+            } else {
+                menu.style.display = 'block'
+            }
+        }
+    </script>
 </body>
 </html>
